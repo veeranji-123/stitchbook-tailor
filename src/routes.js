@@ -22,6 +22,10 @@ router.post('/tailor/slots', (req, res) => forwardCore(req, res));
 router.put('/tailor/slots/:id', (req, res) => forwardCore(req, res));
 router.delete('/tailor/slots/:id', (req, res) => forwardCore(req, res));
 router.post('/slots/block', (req, res) => forwardCore(req, res));
+router.put('/tailors/:id', (req, res) => forwardCore(req, res));
+router.get('/analytics/:tailorId/weekly', (req, res) => forwardCore(req, res));
+router.get('/analytics/:tailorId/services', (req, res) => forwardCore(req, res));
+router.get('/analytics/:tailorId/monthly', (req, res) => forwardCore(req, res));
 
 router.get('/bookings/tailor/:tailorId', requireTailor, async (req, res) => {
   if (req.auth.id !== req.params.tailorId) {

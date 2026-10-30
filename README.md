@@ -16,6 +16,9 @@ Creating a booking stays in `stitchbook-customer`. This service sends status and
 - `GET /api/bookings/:id/measurements`
 - `PUT /api/bookings/:id/measurements`
 - `PUT /api/ratings/:id/reply`
+- `POST /api/messages`
+- `GET /api/messages/:bookingId`
+- `GET /api/bookings/:id/ironing-items`
 - `POST /api/tailor/ironing-services`
 - `PUT /api/tailor/ironing-services/:id`
 - `DELETE /api/tailor/ironing-services/:id`

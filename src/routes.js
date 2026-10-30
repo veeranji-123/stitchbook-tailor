@@ -60,6 +60,9 @@ router.get('/bookings/measurements', (req, res) => forwardCore(req, res));
 router.get('/bookings/:id/measurements', (req, res) => forwardCore(req, res));
 router.put('/bookings/:id/measurements', (req, res) => forwardCore(req, res));
 router.put('/ratings/:id/reply', (req, res) => forwardCore(req, res));
+router.post('/messages', (req, res) => forwardCore(req, res));
+router.get('/messages/:bookingId', (req, res) => forwardCore(req, res));
+router.get('/bookings/:id/ironing-items', (req, res) => forwardCore(req, res));
 
 router.put('/bookings/:id/payment-status', requireTailor, async (req, res) => {
   try {

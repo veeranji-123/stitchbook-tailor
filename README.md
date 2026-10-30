@@ -13,6 +13,11 @@ Creating a booking stays in `stitchbook-customer`. This service sends status and
 - `GET /api/bookings/tailor/:tailorId`
 - `PUT /api/bookings/:id/status`
 - `PUT /api/bookings/:id/payment-status`
+- `POST /api/tailor/ironing-services`
+- `PUT /api/tailor/ironing-services/:id`
+- `DELETE /api/tailor/ironing-services/:id`
+
+An iron shop uses these ironing-service routes. A tailoring shop gets a 403 on them. Customers still read the public list from the customer service.
 
 ## Run
 

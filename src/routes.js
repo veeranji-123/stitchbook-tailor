@@ -56,6 +56,10 @@ router.put('/bookings/:id/status', requireTailor, async (req, res) => {
   }
 });
 
+router.get('/bookings/measurements', (req, res) => forwardCore(req, res));
+router.get('/bookings/:id/measurements', (req, res) => forwardCore(req, res));
+router.put('/bookings/:id/measurements', (req, res) => forwardCore(req, res));
+
 router.put('/bookings/:id/payment-status', requireTailor, async (req, res) => {
   try {
     const response = await customerInternal('PUT', `/internal/shop-bookings/${encodeURIComponent(req.params.id)}/payment-status`, {

@@ -1,6 +1,6 @@
 const express = require('express');
-const { requireTailor } = require('../middleware/auth');
-const { forwardCore, customerInternal, send } = require('../upstream');
+const { requireTailor } = require('./middleware/auth');
+const { forwardCore, customerInternal, send } = require('./upstream');
 
 const router = express.Router();
 

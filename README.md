@@ -16,8 +16,13 @@ Creating a booking stays in `stitchbook-customer`. This service sends status and
 - `POST /api/tailor/ironing-services`
 - `PUT /api/tailor/ironing-services/:id`
 - `DELETE /api/tailor/ironing-services/:id`
+- `POST /api/tailor/stitching-speeds`
+- `PUT /api/tailor/stitching-speeds/:id`
+- `DELETE /api/tailor/stitching-speeds/:id`
+- `GET /api/tailor/pickup-drop`
+- `PUT /api/tailor/pickup-drop`
 
-An iron shop uses these ironing-service routes. A tailoring shop gets a 403 on them. Customers still read the public list from the customer service.
+An iron shop uses the ironing-service routes. A tailoring shop uses the stitching-speed routes. Pickup and drop is available to both.
 
 ## Run
 

@@ -10,6 +10,11 @@ router.post('/auth/login/tailor', (req, res) => forwardCore(req, res));
 router.post('/tailor/ironing-services', (req, res) => forwardCore(req, res));
 router.put('/tailor/ironing-services/:id', (req, res) => forwardCore(req, res));
 router.delete('/tailor/ironing-services/:id', (req, res) => forwardCore(req, res));
+router.post('/tailor/stitching-speeds', (req, res) => forwardCore(req, res));
+router.put('/tailor/stitching-speeds/:id', (req, res) => forwardCore(req, res));
+router.delete('/tailor/stitching-speeds/:id', (req, res) => forwardCore(req, res));
+router.get('/tailor/pickup-drop', (req, res) => forwardCore(req, res));
+router.put('/tailor/pickup-drop', (req, res) => forwardCore(req, res));
 
 router.get('/bookings/tailor/:tailorId', requireTailor, async (req, res) => {
   if (req.auth.id !== req.params.tailorId) {
